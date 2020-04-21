@@ -2,7 +2,7 @@
 **Um simples aplicativo que faz requisições como GET e POST para nossa [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api")**
 
 
-Antes de começar este tutorial é de suma importancia que você já tenha a nossa [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api") clonada e rodando em seu ambiente de desenvolvimento, pois criaremos um fron-end que consumirá os dados dessa [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api").
+Antes de começar este tutorial é de suma importância que você já tenha a nossa [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api") clonada e rodando em seu ambiente de desenvolvimento, pois criaremos um fron-end que consumirá os dados dessa [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api").
 
 ---
 ## Rodando o projeto
@@ -11,12 +11,12 @@ $ git clone https://github.com/AdeLuigi/conceitos-basicos-react-native.git
 $ cd conceitos-basicos-react-native
 $ yarn
 ````
-**Neste momento o servidor já deve estar pronto para rodar**
+**Neste momento app já deve estar pronto para rodar**
 ````git
 $ yarn android
 ````
 ## O que você verá implementado?
-* Uso da biblioteca Axios para nos auxiliar a fazer requisções para a nossa [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api").
+* Uso da biblioteca Axios para nos auxiliar a fazer requisições para a nossa [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api").
 * Utilização dos React Hooks como useState e useEffect.
 * Listagem e adição de likes👍 em nosso repositório.
 ---
@@ -109,13 +109,13 @@ Como diria Jack o Estripador, vamos por partes. A primeira linha representa os i
 ````javascript
 import React, { useEffect, useState } from "react";
 ````
-Logo em seguida nós iremos importar a [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api"), com essa função nós conseguiremos fazer requicições para o nosso back-end.
+Logo em seguida nós iremos importar a [api](https://github.com/AdeLuigi/conceitos-basicos-nodejs "Clique e veja como desenvolver a api"), com essa função nós conseguiremos fazer requisições para o nosso back-end.
 ````javascript
 import api from './services/api';
 ````
-No React Native não existem elementos html como h1, p, ul, ao inves disso nós utilizamos components do RN, parece meio confuso e é, mas vou explicar. <br>Na web nós utilizamos a tag div para declarar um container, no RN nós utilizamos a View para isso, na web nós utilizamos h1 para declarar um texto de importancia na página, no RN nós usamos o Text.
+No React Native não existem elementos html como h1, p, ul, ao invés disso nós utilizamos components do RN, parece meio confuso e é, mas vou explicar. <br>Na web nós utilizamos a tag div para declarar um container, no RN nós utilizamos a View para isso, na web nós utilizamos h1 para declarar um texto de importância na página, no RN nós usamos o Text.
 
-Todos os elementos do React Native não tem valor semantico, se na web o **H1** é mais importante que o **H2**, no RN Text é Text, não existe uma distinção.
+Todos os elementos do React Native não tem valor semântico, se na web o **H1** é mais importante que o **H2**, no RN Text é Text, não existe uma distinção.
 ````javascript
 import {
   SafeAreaView,
@@ -127,7 +127,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 ````
-Depois de importar todos os components que precisaremos para a criação do app, tá na hora de criar o component App. logo em seguida nós desestruturamos a função useState, nós utilizaremos a variável **repositories** para armazenar os repositórios e a função **setRepository** para nudar o valor de **repositories** indiretamente.
+Depois de importar todos os components que precisaremos para a criação do app, está na hora de criar o component App. logo em seguida nós desestruturamos a função useState, nós utilizaremos a variável **repositories** para armazenar os repositórios e a função **setRepository** para mudar o valor de **repositories** indiretamente.
 ````javascript
 export default function App() {
   const [ repositories, setRepository ] = useState([]);
@@ -204,4 +204,3 @@ Em seguida nós temos o que será renderizado pelo component App:
   );
 }
 ````
-Como no 
